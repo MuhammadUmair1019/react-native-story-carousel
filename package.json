@@ -1,6 +1,6 @@
 {
   "name": "react-native-story-carousel",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A React Native library for creating interactive and engaging screen stories",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
