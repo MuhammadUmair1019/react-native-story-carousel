@@ -25,7 +25,7 @@ jobs:
           node-version: 18
 
       - name: 📥 Install dependencies
-        run: npm install && npm clean && npm prepare
+        run: npm install && npm run clean && npm run prepare
 
       - name: 🕵 Lint the code
         run: npm run lint
