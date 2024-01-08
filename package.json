@@ -17,7 +17,7 @@
     "prettier:write": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "dev": "watch 'yarn prepare' ./src",
+    "dev": "watch 'npm prepare' ./src",
     "prepare": "bob build && husky install",
     "clean": "del-cli lib"
   },
