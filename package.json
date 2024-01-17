@@ -22,9 +22,20 @@
     "clean": "del-cli lib"
   },
   "keywords": [
+    "react",
     "react-native",
     "ios",
-    "android"
+    "android",
+    "react-native-story-carousel",
+    "carousel",
+    "story",
+    "stories",
+    "scroll",
+    "swipe",
+    "images",
+    "snap",
+    "slider",
+    "umair-dev"
   ],
   "repository": {
     "type": "git",
