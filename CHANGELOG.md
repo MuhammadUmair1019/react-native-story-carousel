@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/muhammadumair1019/react-native-story-carousel/compare/1.0.0...1.0.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* **core:** build script ([6334051](https://github.com/muhammadumair1019/react-native-story-carousel/commit/6334051d92a7bf4a2f4b1ad83c7b1b70b1ee46c9))
+
 # 1.0.0 (2024-01-08)
 
 
