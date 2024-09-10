@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Dimensions, GestureResponderEvent, TouchableWithoutFeedback, View, StyleSheet } from 'react-native';
+import { Dimensions, GestureResponderEvent, TouchableWithoutFeedback, View, SafeAreaView, StyleSheet } from 'react-native';
 
 import Indicator from '../../components/Indicator';
 import useSteps from '../../hooks/useSteps';
@@ -43,7 +43,7 @@ const Carousel = ({ screens, style }: ICarouselProps) => {
 
   return (
     <TouchableWithoutFeedback onPress={handleTap}>
-      <View style={[styles.container, { backgroundColor: style?.backgroundColor || colors.white }]}>
+      <SafeAreaView style={[styles.container, { backgroundColor: style?.backgroundColor || colors.white }]}>
         <Indicator style={style} duration={duration} numberOfSteps={numberOfSteps} currentStep={index + 1} />
         <View style={styles.backgroundContainer}>
           <Screen
@@ -57,7 +57,7 @@ const Carousel = ({ screens, style }: ICarouselProps) => {
             {...props}
           />
         </View>
-      </View>
+      </SafeAreaView>
     </TouchableWithoutFeedback>
   );
 };
