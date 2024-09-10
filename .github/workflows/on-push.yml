@@ -8,6 +8,7 @@ concurrency: ${{ github.ref }}
 
 jobs:
   build:
+    if: ${{ !contains(github.event.head_commit.message, 'docs(release):') }}
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,22 @@ jobs:
 
       - name: 💿 Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Merge main into develop
+        run: |
+          git config user.name "${{ env.GIT_AUTHOR_NAME }}"
+          git config user.email "${{ env.GIT_AUTHOR_EMAIL }}"
+          gh pr create --title "🔄 Sync main to develop" --body "" --base develop --head main --repo ${{ github.repository }}
+          gh pr merge --merge --admin --subject "🔄 Sync main to develop" --body ""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
