@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/muhammadumair1019/react-native-story-carousel/compare/1.1.0...1.1.1) (2024-12-19)
+
+
+### Bug Fixes
+
+* **ci:** fix workflows ([cb3e895](https://github.com/muhammadumair1019/react-native-story-carousel/commit/cb3e8958ccb0dba385fa5ba04531b39472c8eacb))
+
 # [1.1.0](https://github.com/muhammadumair1019/react-native-story-carousel/compare/1.0.1...1.1.0) (2024-01-17)
 
 
